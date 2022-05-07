@@ -6,8 +6,8 @@
 <hr/>
 
 <h5>BitCoin $ | Tempo para próxma atualização: <span>{{ timer.getCount() }}s</span></h5>
-<div *ngIf="timer.getCount()==55">
-{{updateBitCoinRates()}}
+<div *ngIf="timer.getCount()==0">
+  {{updateBitCoinRates()}}
 </div>
 
 <table class="table">
