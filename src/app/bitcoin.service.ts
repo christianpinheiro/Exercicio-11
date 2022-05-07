@@ -23,16 +23,16 @@ export class BitcoinService {
   current: Response;
   list: Array<Response> = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {  }
 
   update(){
-    this.http.get<Response>
-    ('https://api.coindesk.com/v1/bpi/currentprice/BRL.json')
-    .subscribe(data =>{
-      this.current = data;
-      this.list.push(data);
-    });
+    if(!this.current){
+      this.http.get<Response>
+      ('https://api.coindesk.com/v1/bpi/currentprice/BRL.json').subscribe(data =>
+      {
+        this.current = data;
+        this.list.push(data);
+      });
+    }
   }
-
-
 }
