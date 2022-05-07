@@ -5,8 +5,10 @@
 <b>RA:</b> 0050831911005 <br>
 <hr/>
 
-
-<h5>BitCoin$ <span>{{ timer.getCount() }}s</span></h5>
+<h5>BitCoin$ | Tempo para próxma atualização: <span>{{ timer.getCount() }}s</span></h5>
+<div *ngIf="timer.getCount()==0">
+  {{updateBitCoinRates()}}
+</div>
 
 <table class="table">
 <thead>

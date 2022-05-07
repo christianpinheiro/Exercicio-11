@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TimerService {
   private timer: any;
-  private counter = 0;
+  private counter = 60;
   
   constructor() { }
 
@@ -14,6 +14,9 @@ export class TimerService {
   }
 
   getCount(){
+    if(this.counter==-1){
+      this.counter = 60;
+    }
     return this.counter;
   }  
 
