@@ -15,8 +15,8 @@ export class AppComponent {
     public timer: TimerService    
     ){this.timer.start(1000)}
 
-  updateBitCoinRates() {
-    this.bitcoinService.update();
-  }
+    updateBitCoinRates() {
+      this.bitcoinService.update();
+    }
   
 }

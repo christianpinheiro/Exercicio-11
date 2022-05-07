@@ -14,7 +14,7 @@ export class TimerService {
   }
 
   getCount(){
-    if(this.counter==-1){
+    if(this.counter==54){
       this.counter = 60;
     }
     return this.counter;
