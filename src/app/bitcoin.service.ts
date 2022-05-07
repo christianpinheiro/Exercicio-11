@@ -26,7 +26,7 @@ export class BitcoinService {
   constructor(private http: HttpClient) {  }
 
   update(){
-    if(!this.current){
+    if(this.current.time){
       this.http.get<Response>
       ('https://api.coindesk.com/v1/bpi/currentprice/BRL.json').subscribe(data =>
       {
