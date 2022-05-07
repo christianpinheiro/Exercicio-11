@@ -10,11 +10,13 @@ import { TimerService } from './timer.service';
 export class AppComponent {
   name = 'Exercício 11 - Atualização de taxa do BitCoin';
 
-  constructor(public bitcoinService: BitcoinService) {
-    this.timer.start(1000);
-  }
+  constructor(
+    public bitcoinService: BitcoinService,
+    public timer: TimerService    
+    ){this.timer.start(1000)}
 
   updateBitCoinRates() {
     this.bitcoinService.update();
   }
+  
 }
